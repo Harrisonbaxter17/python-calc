@@ -29,7 +29,7 @@ def calculate():
         print("{} / {} = ".format(number_1, number_2))
         print(number_1 / number_2)
     else:
-        print("you have entered an incorrect operator, try agian")
+        print("you have entered an incorrect operator, try again")
 
     again()
 
