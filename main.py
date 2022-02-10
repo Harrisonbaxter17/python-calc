@@ -49,4 +49,4 @@ def again():
 
 calculate()
 
-calculate()
+
