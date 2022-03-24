@@ -38,6 +38,7 @@ _________________________
     
 def Basic_Math():
 
+    print("-------------------------")
     operation = input("""please chose an operator:
     + for addition
     - for subtraction
@@ -45,9 +46,12 @@ def Basic_Math():
     / for division
     : """)
 
+    print("--------------------------------")
+    
     number1 = input("please enter the first number: ")
-    print()
+    print("--------------------------------")
     number2 = input("please enter the second number: ")
+    print("--------------------------------")
 
     def addition():
         total = float(number1) + float(number2)
@@ -107,18 +111,21 @@ type Y for YES or N for NO
 
 def Advanced_math():
 
+    print("-------------------------")
+    
     operation = input("""please chose an operator:
     <> for the square root of (n)
     : """)
         
-    number1 = input("please enter a number to perfrom the square root on: ")
+    number1 = input("please enter a number: ")
 
     def sqrt():
         total = math.sqrt(float(number1))
-        print(str(total))
+        print(f"the √ of {number1} =  {total}" )
         
     if operation == "<>":
         sqrt()
+
     again()
 
 def again():
