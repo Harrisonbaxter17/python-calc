@@ -1,52 +1,80 @@
-def calculate():
-    def welcoming():
-        print("""
-        welcome to the python calculator""")
+import time
+import math
+import sys
+def calc():
+    print("------------------------------------------------------")
+    print("-----------WELCOME TO THE PYTHON CALCULATOR-----------")
+    print("------------------------------------------------------")
 
-    welcoming()
+    operator = input("""please chose an operator:
+        + for addition
+        - for subtraction
+        * for multiplication
+        / for division
+        <> for square root of (x)
+        : """)
+        
+    number1 = input("enter the first number: ")
 
-    operation = input("""
-    please type the operator you wold like to perform
-    + for addition
-    - for subtraction
-    * for multiplication
-    / for division
-    """)
+    print()
 
-    number_1 = int(input("enter the first number"))
-    number_2 = int(input("enter the second number"))
+    number2 = input("enter the second number: ")
+    
 
-    if operation == "+":
-        print("{} + {} = ".format(number_1, number_2))
-        print(number_1 + number_2)
-    elif operation == "-":
-        print("{} - {} = ".format(number_1, number_2))
-        print(number_1 - number_2)
-    elif operation == "*":
-        print("{} * {} = ".format(number_1, number_2))
-        print(number_1 * number_2)
-    elif operation == "/":
-        print("{} / {} = ".format(number_1, number_2))
-        print(number_1 / number_2)
+    def addition():
+        total = float(number1) + float(number2)
+        print(f"{number1} + {number2} = {total}")
+
+    def subtraction():
+        total = float(number1) - float(number2)
+        print(f"{number1} - {number2} = {total}")
+
+    def multiplication():
+        total = float(number1) * float(number2)
+        print(f"{number1} * {number2} = {total}")
+
+    def division():
+        total = float(number1) / float(number2)
+        print(f"{number1} / {number2} = {total}")
+
+
+    if operator == "+":
+        addition()
+    elif operator == "-":
+        subtraction()
+    elif operator == "*":
+        multiplication()
+    elif operator == "/":
+        division()
     else:
-        print("you have entered an incorrect operator, try again")
+        print("you have typed an incorrect operator")
 
     again()
 
 
 def again():
-    calculator_again = input(("""
+    calculator_again = input("""
     do you want to use the calculator again?
     please type Y for YES or N for NO
-    """))
+    """).upper()
+
     if calculator_again == "Y":
-        calculate()
+        calc()
     elif calculator_again == "N":
-        print("goodbye!")
-    else:
-        again()
+        print("THANK-YOU FOR USING THE PYTHON CALCULATOR, GOODBYE")
+        print("EXITING.")
+        time.sleep(0.5)
+        print("EXITING..")
+        time.sleep(0.5)
+        print("EXITING...")
+        time.sleep(0.5)
+        print("EXITING....")
+        time.sleep(0.5)
+        print("EXITING.....")
+        sys.exit(0)
+        
 
+calc()
 
-calculate()
 
 
