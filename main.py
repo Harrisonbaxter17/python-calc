@@ -24,6 +24,13 @@ _________________________
 <> for square root of (x)
 _________________________
 
+-------------------------
+--------Number 3---------
+-------------------------
+
+(PI) for displaying PI 
+_________________________
+
 : """)
 
 
@@ -152,6 +159,10 @@ type Y for YES or N for NO
         time.sleep(0.5)
         print("EXITING...")
         sys.exit(0)
+
+def PI():
+
+    print
 
 
 calc()
