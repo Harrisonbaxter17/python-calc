@@ -21,6 +21,7 @@ def calc():
     5. √ (square root)
     6. x²
     7. a²+b² = c² (Pythagorean Theorem)
+    8.
     : """)
 
     def add():
